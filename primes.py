@@ -2,6 +2,9 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 def primes(number_of_primes):
+    if number_of_primes <= 0:
+        raise ValueError(f"The value `{number_of_primes}` is an invalid input to this function.")
+
     sieve_size = number_of_primes * 10;
     primes = [] # Primes identified by the sieve
     terminations = [] # The first multiple of a prime at which the sieve has stopped
